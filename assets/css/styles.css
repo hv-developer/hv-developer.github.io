@@ -73,7 +73,7 @@ body {
     justify-content: left;
     height: 90vh;
     min-height: 400px;
-    background: url('D:/Site/assets/img/robotic-hand.jpg') no-repeat center center;
+    background: url('/assets/img/robotic-hand.jpg') no-repeat center center;
     background-size: contain;
     color: #fff;
     text-align: center;
