@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BE-AI Soluções</title>
+        <link rel="stylesheet" href="assets/css/styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+        <link rel="icon" href="D:/Site/image4.jpeg" type="image/x-icon">
+    </head>
+    <body>
+    
+    <header class="fixed-header">
+        <div class="header-content">
+            <div class="logo">
+                <img src="D:/Site/assets/img/logo-beai.png" alt="BE-AI Soluções Logo" style="height: 50px;">
+            </div>
+            
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#banner-principal">Home</a></li>
+                    <li><a href="#solucoes">Soluções</a></li>
+                    <li><a href="#sobre-nos">Sobre Nós</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+    
+
+<section id="banner-principal" data-aos="fade-up">
+    <div class="banner-content">
+        <div class="banner-image"></div>
+        <div class="banner-text">
+            <h2>Potencialize sua Empresa com IA</h2>
+            <p>Na BE-AI Soluções, além de transformar grandes volumes de dados em insights valiosos, também usamos tecnologias avançadas de IA para aumentar a eficiência e impulsionar a inovação na sua empresa. Nossas soluções são projetadas para otimizar processos, economizar tempo e elevar o desempenho, gerando resultados extraordinários.</p>
+            <p>Descubra como nossas soluções podem otimizar seus processos e gerar resultados extraordinários.</p>
+            <a href="#contato" class="cta-button">Entre em contato</a>
+        </div>
+    </div>
+</section>
+
+<section id="solucoes" data-aos="fade-up">
+    <h2>Nossas Soluções</h2>
+    <p>Descubra como nossas soluções inovadoras podem transformar a sua empresa. Na BE-AI Soluções, oferecemos serviços personalizados de Inteligência Artificial, Business Intelligence e Automação de Tarefas, desenvolvidos para atender às necessidades específicas do seu negócio.</p>
+    <div class="servico" data-aos="fade-up">
+        <div class="servico-img">
+            <img src="D:/Site/assets/img/futuristic-business-scene-with-ultra-modern-ambiance.jpg" alt="Tecnologia e Inovação">
+        </div>
+        <div class="servico-texto">
+            <h3>Inteligência Artificial</h3>
+            <p>Implementamos soluções de IA que potencializam a análise de dados, otimizam processos e promovem a inovação, proporcionando uma vantagem competitiva significativa.</p>
+        </div>
+    </div>
+    <div class="servico" data-aos="fade-up" data-aos-delay="100">
+        <div class="servico-img">
+            <img src="D:/Site/assets/img/scene-with-business-person-working-futuristic-office-job.jpg" alt="Business Intelligence">
+        </div>
+        <div class="servico-texto">
+            <h3>Business Intelligence</h3>
+            <p>Desenvolvemos sistemas de BI que fornecem insights detalhados e acionáveis, permitindo uma tomada de decisões mais informada e estratégica.</p>
+        </div>
+    </div>
+    <div class="servico" data-aos="fade-up" data-aos-delay="200">
+        <div class="servico-img">
+            <img src="D:/Site/assets/img/close-up-anthropomorphic-robot-working-as-delivery-man.jpg" alt="Automação de Tarefas">
+        </div>
+        <div class="servico-texto">
+            <h3>Automação de Tarefas</h3>
+            <p>Automatizamos tarefas repetitivas e manuais, liberando tempo e recursos para que sua equipe possa focar em atividades estratégicas e de maior valor.</p>
+        </div>
+    </div>
+</section>
+
+<section id="sobre-nos" data-aos="fade-up">
+    <h2>Sobre Nós</h2>
+    <p>A BE-AI Soluções foi criada com o intuito de ajudar as pessoas com suas tarefas diárias, desenvolvendo aplicações de IA e automações para melhorar o tempo e desempenho das pessoas.</p>
+    <h3>Missão</h3>
+    <p>Transformar o futuro com inteligência artificial e automação.</p>
+    <h3>Visão</h3>
+    <p>Ser líder em inovação tecnológica, proporcionando soluções que melhorem a vida das pessoas e empresas.</p>
+    <h3>Valores</h3>
+    <ul>
+        <li>Inovação</li>
+        <li>Eficiência</li>
+        <li>Compromisso</li>
+    </ul>
+</section>
+
+<section id="contato" data-aos="fade-up">
+    <h2>Entre em Contato</h2>
+    <form action="send_contact_form.php" method="POST">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" name="mensagem" required></textarea>
+        <button type="submit">Enviar</button>
+    </form>
+    <div class="contato-info">
+        <p>Email: contato@be-ai.com</p>
+        <p>Telefone: (11) 1234-5678</p>
+    </div>
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+    $(document).ready(function(){
+        AOS.init({
+            duration: 1000,
+        });
+
+        $('.hamburger').click(function() {
+            $('.nav-links').toggleClass('nav-active');
+        });
+    });
+</script>
+</body>
+</html>

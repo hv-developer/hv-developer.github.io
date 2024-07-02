@@ -1,0 +1,309 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: url('path/to/your/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin-top: 80px; /* Ajuste conforme a altura do header */
+    color: #333;
+}
+
+/* Estilo para o header fixo */
+.fixed-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color:#000000; /* Cor do banner */
+    z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 100px;
+}
+
+.header-content h1 {
+    font-size: 1.5em;
+    color: #050505;
+    margin-left: 10px; /* Alinhamento à esquerda */
+}
+
+.header-content nav ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+.header-content nav ul li a {
+    text-decoration: none;
+    color: #ffffff; /* Cor do texto */
+    font-size: 1em;
+    transition: color 0.3s ease;
+}
+
+.header-content nav ul li a:hover {
+    color: #007BFF;
+}
+/* Estilo para o menu hamburger */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background: #000;
+    margin: 4px 0;
+    transition: all 0.3s ease;
+}
+/* Estilo adicional para o banner-principal */
+#banner-principal {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    height: 90vh;
+    min-height: 400px;
+    background: url('D:/Site/assets/img/robotic-hand.jpg') no-repeat center center;
+    background-size: contain;
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+}
+
+#banner-principal .banner-content {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+    border-radius: 20px;
+    max-width: 50%;
+}
+
+#banner-principal .banner-text h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+}
+
+#banner-principal .banner-text p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+}
+
+#banner-principal .cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #ff6600;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+    font-family: 'Roboto', sans-serif;
+}
+
+#banner-principal .cta-button:hover {
+    background-color: #ff4500;
+}
+
+/* Adiciona um overlay escuro sobre a imagem de fundo */
+/* #banner-principal::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 80%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+} */
+
+/* Estilo para as sections com imagem e texto lado a lado */
+.servico {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.servico:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.servico-img img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.servico:nth-child(even) .servico-img img {
+    margin-right: 0;
+    margin-left: 20px;
+}
+
+.servico-texto {
+    max-width: 600px;
+}
+
+/* Estilo para a seção "Sobre Nós" */
+#sobre-nos {
+    padding: 40px;
+    background: transparent;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: left; /* Alinhar o texto à esquerda */
+}
+
+#sobre-nos h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.5em;
+    color: #007BFF;
+    margin-bottom: 20px;
+}
+
+#sobre-nos h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#sobre-nos p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+#sobre-nos ul {
+    list-style-type: disc; /* Estilo de lista com bolinhas */
+    margin-left: 20px; /* Recuo à esquerda para a lista */
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+#sobre-nos ul li {
+    margin-bottom: 10px;
+}
+
+#sobre-nos ul li:last-child {
+    margin-bottom: 0; /* Remove margem inferior do último item da lista */
+}
+
+
+/* Estilo para a seção de contato */
+#contato {
+    padding: 40px 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 20px auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#contato h2 {
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#contato form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#contato form label {
+    font-size: 1.1em;
+}
+
+#contato form input, #contato form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+#contato form button {
+    padding: 15px 30px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contato form button:hover {
+    background-color: #0056b3;
+}
+
+.contato-info {
+    margin-top: 20px;
+    font-size: 1.1em;
+    text-align: center;
+}
+
+.contato-info p {
+    margin-bottom: 10px;
+}
+
+/* Estilos específicos para a seção "Soluções" */
+#solucoes {
+    padding: 40px 20px;
+    background: transparent;
+    max-width: 1200px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+#solucoes h2 {
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #007BFF;
+}
+
+#solucoes p {
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    line-height: 1.6;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Personalização para h3 e p dentro da seção "Soluções" */
+#solucoes .servico-texto h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#solucoes .servico-texto p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1em;
+    line-height: 1.5;
+    color: #666;
+}
