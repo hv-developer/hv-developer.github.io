@@ -18,7 +18,7 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color:#000000; /* Cor do banner */
+    background-color: #000000; /* Cor do banner */
     z-index: 1000;
 }
 
@@ -26,7 +26,22 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 100px;
+    padding: 10px 20px;
+}
+
+.header-content a {
+    display: flex;
+    align-items: center;
+}
+
+.header-content .logo {
+    height: 50px; /* Ajuste conforme necessário */
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.header-content .logo:hover {
+    transform: scale(1.1);
 }
 
 .header-content h1 {
@@ -38,7 +53,7 @@ body {
 .header-content nav ul {
     list-style: none;
     display: flex;
-    gap: 40px;
+    gap: 20px;
 }
 
 .header-content nav ul li a {
@@ -51,6 +66,7 @@ body {
 .header-content nav ul li a:hover {
     color: #007BFF;
 }
+
 /* Estilo para o menu hamburger */
 .hamburger {
     display: none;
@@ -65,6 +81,7 @@ body {
     margin: 4px 0;
     transition: all 0.3s ease;
 }
+
 /* Estilo adicional para o banner-principal */
 #banner-principal {
     position: relative;
@@ -78,6 +95,7 @@ body {
     color: #fff;
     text-align: center;
     overflow: hidden;
+    padding: 20px;
 }
 
 #banner-principal .banner-content {
@@ -118,18 +136,6 @@ body {
 #banner-principal .cta-button:hover {
     background-color: #ff4500;
 }
-
-/* Adiciona um overlay escuro sobre a imagem de fundo */
-/* #banner-principal::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 50%;
-    height: 80%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 0;
-} */
 
 /* Estilo para as sections com imagem e texto lado a lado */
 .servico {
@@ -208,7 +214,6 @@ body {
 #sobre-nos ul li:last-child {
     margin-bottom: 0; /* Remove margem inferior do último item da lista */
 }
-
 
 /* Estilo para a seção de contato */
 #contato {
@@ -306,4 +311,80 @@ body {
     font-size: 1.1em;
     line-height: 1.5;
     color: #666;
+}
+
+/* Media Queries para responsividade */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .header-content nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    #banner-principal {
+        justify-content: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    #banner-principal .banner-content {
+        max-width: 90%;
+    }
+
+    .servico {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .servico:nth-child(even) {
+        flex-direction: column;
+    }
+
+    .servico-img img {
+        margin-right: 0;
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
+
+    #sobre-nos, #contato, #solucoes {
+        padding: 20px;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-content nav ul {
+        display: none; /* Esconde o menu normal em telas pequenas */
+    }
+
+    .hamburger {
+        display: flex; /* Exibe o ícone do menu hamburger */
+    }
+
+    .header-content {
+        padding: 10px 20px;
+    }
+
+    .logo {
+        height: 40px; /* Ajuste o tamanho da logo para telas pequenas */
+    }
+
+    #banner-principal .banner-text h2 {
+        font-size: 1.8em;
+    }
+
+    #banner-principal .banner-text p {
+        font-size: 1em;
+    }
+
+    .cta-button {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
 }
