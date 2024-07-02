@@ -360,15 +360,31 @@ body {
 
 @media (max-width: 480px) {
     .header-content nav ul {
-        display: none; /* Esconde o menu normal em telas pequenas */
+        display: none; /* Esconde o menu principal */
     }
 
     .hamburger {
-        display: flex; /* Exibe o ícone do menu hamburger */
+        display: flex; /* Mostra o menu hamburger */
     }
 
-    .header-content {
-        padding: 10px 20px;
+    .header-content nav ul.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background: #000000;
+        padding: 20px;
+        border-radius: 8px;
+        z-index: 1000;
+    }
+
+    .header-content nav ul.active li {
+        margin-bottom: 10px;
+    }
+
+    .header-content nav ul.active li:last-child {
+        margin-bottom: 0;
     }
 
     .logo {
